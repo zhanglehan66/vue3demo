@@ -40,4 +40,19 @@ export const useUsersStore = defineStore("users", {
       this.name = name;
     },
   },
+
+  //   开启持久化
+  persist: true,
+
+  //   可以选特定的值来持久化
+  //    persist:{
+  //        {
+  //            paths: ['name'],//name使用localStorage保存
+  //            storage: localStorage,
+  //         },
+  //         {
+  //            paths: ['age'],//age使用sessionStorage保存
+  //            storage: sessionStorage,
+  //          },
+  //    }
 });
