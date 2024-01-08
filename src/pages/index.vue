@@ -20,6 +20,7 @@
       <p>getters+Params:{{ store.getAddParamsAge(500) }}</p>
       <Child></Child>
       <button @click="store.name = '麦克'">修改name</button>
+      <button @click="store.age = '30'">修改age</button>
       <button @click="reset">重置</button>
       <button @click="patchStore2">批量修改数据</button>
       <button @click="store.saveName('李成功')">action</button>

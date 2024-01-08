@@ -42,17 +42,22 @@ export const useUsersStore = defineStore("users", {
   },
 
   //   开启持久化
-  persist: true,
+  // persist: true,
 
   //   可以选特定的值来持久化
-  //    persist:{
-  //        {
-  //            paths: ['name'],//name使用localStorage保存
-  //            storage: localStorage,
-  //         },
-  //         {
-  //            paths: ['age'],//age使用sessionStorage保存
-  //            storage: sessionStorage,
-  //          },
-  //    }
+  persist: {
+    enabled: true,
+    strategies: [
+      {
+        key: ["name"], //name使用localStorage保存
+        storage: localStorage,
+        paths: ['name', 'nameinfo']
+      },
+      {
+        key: ["age"], //age使用sessionStorage保存
+        storage: sessionStorage,
+        paths: ['age', 'ageInfo']
+      },
+    ],
+  },
 });
