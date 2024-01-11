@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import Child from "./components/Child.vue";
+import Child from "src/pages/components/Child.vue";
 import { reactive, computed } from "vue";
 import router from "../router";
 import headComponent from "./components/head.vue";
